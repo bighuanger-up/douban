@@ -1,0 +1,1330 @@
+@import "./rests.css";
+@import "./common.css";
+
+/* 首页通用样式 */
+
+.container {
+    width: 950px;
+    margin: 0 auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    line-height: 2;
+}
+
+.section {
+    width: 100%;
+    padding: 35px 0;
+}  
+
+.adv-tag::after {
+    content: "广告";
+    color: #c9c9c9;
+    font-size: 13px;
+}
+
+/* 单词换行 */
+ul {
+    word-break: break-all;
+}
+
+/* 左侧 */
+.aside-left {
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+}
+
+/* 右侧 */
+.aside-right {
+    float: right;
+    width: 265px;
+    margin-left: 35px;
+}
+
+/* 主区域 */
+.main {
+    /* 创建BFC，创建BFC的元素会避开浮动 */
+    overflow: hidden;
+}
+
+.adv img{
+    width: 100%;
+    /* 去掉图片下面的白边 */
+    display: block;
+}
+
+.section-title {
+    margin: 12px 0;
+    margin-top: 5px;
+}
+
+.section-title .title {
+    display: inline;
+    font-size: 15px;
+    color: #072;
+}
+
+.section-title .title::after {
+    content: "  · · · · · ·";
+}
+
+.section-title .link {
+    color: #37a;
+    font-size: 12px;
+}
+
+a {
+    color: #37a;
+}
+
+a:hover {
+    background: #37a;
+    color: #fff;
+}
+
+a:active {
+    color: #fff;
+    text-decoration: none;
+    background: #f93;
+}
+
+.section-title .link::before {
+    content: "（";
+}
+.section-title .link::after {
+    content: "）";
+} 
+
+/* .section-title a:hover {
+    background: #37a;
+    color: #fff;
+} */
+ 
+.section:nth-child(2n+1) {
+    background: #f7f7f7;
+}
+
+
+.item-list li {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+.item-list li .img img {
+    width: 100%;
+    display: block;
+}
+
+
+/* 首页通用样式结束 */
+
+/* ================================================================================================================ */
+
+/*  页头开始 */
+
+.header {
+    height: 60px;
+    /* padding-top: 30px; */
+    box-sizing: border-box;
+}
+
+.header .container {
+    margin-top: 30px;
+}
+
+.header .logo,
+.header .menu,
+.header .search {
+    height: 30px;
+    /* border: 2px solid; */
+}
+
+.header .logo a {
+    /* 行盒设置宽高无效，需要变为块盒 */
+    display: block;
+    width: 154px;
+    height: 30px;
+    background: url("../img/logo_db.png") no-repeat left top/100%;
+    /* 隐藏“豆瓣” */
+    height: 0;
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+
+/* 隐藏‘豆瓣’ 第二只中方法 */
+
+
+/* .header .logo a span {
+    display: none;
+} */
+
+
+/* 伪类元素，设置边框里面提示内容 */
+
+.header .search .txt::placeholder {
+    color: #ccc;
+}
+
+.header .search .txt {
+    width: 240px;
+    height: 20px;
+    padding-top: 5px;
+    font-size: 13px;
+    text-indent: 5px;
+}
+
+.header .search {
+    width: 270px;
+    height: 30px;
+    border: 1px solid #c3c3c3;
+    margin-left: 30px;
+    position: relative;
+    line-height: normal;
+}
+
+.header .search button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 5px;
+    top: 0;
+    color: #c3c3c3;
+}
+
+.header .menu {
+    margin-top: 6px;
+}
+
+.header .menu a {
+    background: url("../img/nav_logo.png") no-repeat left top/463px 20px;
+    width: 40px;
+    height: 20px;
+    /* 行盒设置宽高无效，设置为块盒 */
+    /* display: block; */
+    /* 浮动元素本身就是块盒 */
+    float: left;
+    margin-left: 17px;
+}
+
+.header .menu .menu-read {
+    background-position: 0 0;
+}
+
+.header .menu .menu-movie {
+    background-position: -60px;
+}
+
+.header .menu .menu-music {
+    background-position: -120px;
+}
+
+.header .menu .menu-group {
+    background-position: -180px;
+}
+
+.header .menu .menu-city {
+    background-position: -300px;
+}
+
+.header .menu .menu-FM {
+    background-position: -240px;
+}
+
+.header .menu .menu-time {
+    background-position: -360px;
+}
+
+.header .menu .menu-doupin {
+    background-position: -420px;
+    width: 60px;
+}
+
+.aside-left .title {
+    font-size: 24px;
+}
+
+.dark-color {
+    color: #494949;
+}
+
+
+/* 页头结束 */
+
+
+/* ======================================================================================================================= */
+
+
+/* 横幅开始 */
+
+.banner {
+    height: 304px;
+    background: url(../img/banner-bg.jpg) no-repeat 120px top/auto 100%;
+    background-color: #edf4ed;
+}
+
+.banner .container .loginarea {
+    width: 300px;
+    height: 300px;
+}
+
+.banner .container .slogin {
+    margin-top: 90px;
+    margin-right: 20px;
+}
+
+.banner .container .slogin .title {
+    font-size: 25px;
+    color: #111;
+}
+
+.banner .container .slogin .title span {
+    margin-left: 10px;
+}
+
+.banner .container .slogin .download  {
+    margin-top: 25px;
+}
+
+.banner .container .slogin .download .btn {
+    width: 115px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    border-radius: 2px;
+}
+
+.banner .container .slogin .download .qrcode {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #48aa0d;
+    border-radius: 2px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.banner .container .slogin .download .qrcode img {
+    width: 100%;
+    height: 100%;
+}
+
+.banner .container .qrcode-img {
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: 200px;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.banner .container .qrcode-img p {
+    color: #666;
+    font-size: 13px;
+    text-align: center;
+}
+
+.banner .container .slogin .download .qrcode:hover .qrcode-img {
+    display: block;
+}
+
+/* 横幅结束 */
+
+/* ================================================================================================== */
+
+
+/* 热点开始 */
+
+.hot-list {
+    line-height: 1.5;
+}
+
+.hot-list li {
+    margin-bottom:15px ;
+    line-height: 1;
+}
+
+.hot-list li .title {
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.hot-list li .desc {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.hot-list li .desc span {
+    margin-right: 4px;
+}
+
+.hot-main .left {
+    width: 350px;
+}
+
+.hot-main ul {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* 添加最后一行元素，为了上面平均分布 */
+ul::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    
+}
+
+.hot-main .left li {
+    /* display: inline-block; */
+    width: 170px;
+    font-size: 12px;
+    margin: 8px 0;
+    /* li顶端对齐 */
+    /* vertical-align: top; */
+}
+
+.hot-main .left li .img img {
+    width: 100%;
+    display: block;
+}
+
+.hot-main .left li .word span {
+    color: #999;
+}
+
+.hot-main .right {
+    width: 275px;
+    font-size: 12px;
+}
+
+.hot-main .right ul {
+    margin-bottom: -5px;
+}
+
+.hot-main .right .title {
+    color: #999;
+}
+
+.hot-main .right .desc {
+    color: #666;
+}
+
+.hot-main .right li {
+    margin-bottom: 0;
+}
+
+/* 热点结束 */
+
+
+/* 豆瓣时间开始 */
+
+.time-main li {
+    width: 100px; 
+    margin-right: 60px;
+    margin-bottom: 30px;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+
+.time-main li .word a{
+    color: #333;
+    line-height: 1.38;
+}
+
+.time-main li .word a:hover {
+    color: #fff;
+}
+
+.time-main li .word span {
+    display: block;
+    color: #999;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* 豆瓣时间结束 */
+
+/* 豆瓣视频开始 */
+
+.video-main .section-title .title:hover {
+    background: none;
+}
+
+.video-main .section-title li {
+    width: 250px;
+    margin-right: 30px;
+    font-size: 13px;
+}
+
+.video-main .section-title li:nth-child(3n) {
+    margin: 0;
+}
+
+.video-main li .img {
+    position: relative;
+}
+
+.video-main li .img::before {
+    /* 宽高撑满 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.2);
+    color: #fff;
+    text-align: center;
+    line-height: 144px; 
+    font-size: 35px;
+}
+
+.video-main .section-title .item-list {
+    margin-bottom: -25px;
+}
+
+
+/* 豆瓣视频结束 */
+
+/* ============================================================================================================= */
+
+/* 电影主区域开始 */
+
+.container {
+    margin-top: -10px;
+}
+
+/* .section-title {
+    margin-top: 0;
+} */
+
+.movie-title {
+    color: #37a;
+}
+
+.movies-ol {
+    list-style-type: decimal;
+}
+
+.title {
+    margin-bottom: 12px;
+}
+
+.tags-list {
+    line-height: 1px;
+}
+
+.option {
+    font-size: 14px;
+}
+
+.option li {
+    margin-top: 5px;
+} 
+.option li img {
+    position: relative;
+    top: -5px;
+}
+
+.aside-right .tags-list {
+    margin-top: -10px;
+}
+
+.aside-right .tags-list ul {
+    font-size: 12px;
+}
+
+.aside-right .tags-list li {
+    display: inline-block;
+    width: 48px;
+    margin-top: 4px;
+    text-align: left;
+    line-height: 18px;
+}
+
+.aside-right .option-list {
+    margin-top: -10px;
+}
+
+
+.movies-ol li {
+    border-bottom: 1px solid #eaeaea;
+    /* 把ol 排序列入包含块中 */
+    list-style-position: inside;
+    list-style-type: decimal;
+    margin-bottom: 2px;
+    padding-bottom:5px ;
+    font-size: 12px;
+}
+
+/* 主区域 */
+
+/* 去掉Img图片的下白边 */
+.movies-list .picture {
+    font-size: 0;
+    height: 145px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.movies-list {
+    margin-top: -40px;
+}
+
+.movies-list li {
+    display: inline-block;
+    width:100px ;
+    font-size: 12px;
+    margin-top: 30px;
+    vertical-align: top;
+    margin-right: 6px;
+    margin-left: 6px;
+    
+}
+
+.movies-list img {
+    width: 100px;
+
+}
+
+.movies-list .name {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 4px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.movies-list .name a:hover {
+    color: #fff;
+}
+
+.movies-list .name a {
+    color: #333;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.movies-list ul li .rating .allstar50 {
+    float: left;
+    width: 55px;
+    height: 11px;
+    margin-left: 8px;
+    background: url("../img/star-bg.png") no-repeat left top/55px 121px;
+}
+.movies-list ul li .rating i {
+    position: relative;
+    top: -6px;
+    left: 10px;
+    color: #e09015;
+}
+
+.movies-list .choose-seat {
+    text-align: center;
+    background: #1c8bd0;
+    /* color: #fff; */
+    margin: 0 14px;
+    border-radius: 3px;
+}
+
+.movies-list .choose-seat a {
+    color: #fff;
+}
+
+.movies-list .choose-seat:hover {
+    background: #047fcb;
+}
+
+/* 电影主区域结束 */
+
+
+/* ========================================================================================= */
+
+
+/* 豆瓣小组开始 */
+
+/* 左侧区域 */
+.group-type ul {
+    line-height: 1.62;
+}
+
+.group-type li {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.group .aside-left .title {
+    margin-bottom: 0;
+}
+
+.group .aside-left .title a {
+    color: #007982;
+}
+
+.group .aside-left .group-type li a{
+    color: #007982;
+}
+
+/* 右侧区域 */
+
+.group .section-title {
+    margin-bottom: 8px;
+}
+
+.group .aside-right .allgroup-list {
+    margin-left: -8px;
+}
+.group .aside-right .allgroup-list .cate {
+    margin-bottom: -11px;  
+}
+
+
+.group .aside-right .allgroup-list .cate li a:hover {
+    color: #fff;
+}
+
+.group .aside-right .allgroup-list .cate .cate-label{
+    width: 100%;
+}
+
+.group .aside-right .allgroup-list .cate .cate-label a {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.group .aside-left .title a:hover {
+    color: #fff;
+}
+
+.group .aside-left .group-type li a:hover {
+    color: #fff;
+}
+
+.group .aside-right .allgroup-list .cate ul {
+    line-height: 20px;
+}
+
+.group .aside-right .allgroup-list .cate li{
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 10px;
+    /* line-height: normal; */
+}
+
+.group .aside-right .allgroup-list .cate li a {
+    color: #007982;
+}
+
+.group .aside-right .allgroup-list .cate li a:hover {
+    color: #fff;
+}
+
+.group .main .group-list {
+    margin-top: -30px;
+}
+
+.group .main .group-list ul li {
+    position: relative;
+    width: 248px;
+    /* margin-left: 30px; */
+    margin-top: 30px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.group .main .group-list ul li .pic {
+    float: left;
+    margin-right: 15px;
+}
+
+.group .main .group-list ul li .pic a img {
+    width: 48px;
+    height: 48px;
+}
+
+.group .main .group-list ul li .info .title {
+    font-size: 12px;
+}
+
+.group .main .group-list ul li .info {
+    font-size: 13px;
+    color: #999;
+}
+
+.group .main .group-list ul li .info .title-next {
+    margin-top: -13px;
+}
+
+/* 豆瓣小组结束 */
+
+/* ==================================================================================================================== */
+
+/* 豆瓣读书开始 */
+
+/* 左侧区域 */
+
+.read .aside-left .read-type li img {
+    position: relative;
+    top: -5px;
+}
+
+.read .aside-left .read-type li {
+    margin-top: -4px;
+}
+
+.read .aside-left .title a {
+    color: #4a2f14;
+}
+.read .aside-left .title a:hover {
+    color: #fff;
+}
+
+.read .aside-left .read-type li a {
+    color: #614e3c;
+    font-size: 14px;
+}
+
+.read .aside-left .read-type ul {
+    margin-top: -15px;
+}
+
+.read .aside-left .read-type li a:hover {
+    color: #fff;
+}
+
+.read .aside-left .apps-list {
+    margin-top: -10px;
+}
+
+.read .aside-left .apps-list .app-icons-1 {
+    font-size: 0;
+}
+.read .aside-left .apps-list .app-icons-1 i {
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #999;
+}
+.read .aside-left .apps-list a .app-icons{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url("../img/app_icons.jpg") no-repeat;
+}
+
+.read .aside-left .apps-list ul li .app-icons-2 {
+    font-size: 12px;
+    margin-top: -12px;
+}
+
+.read .aside-left .apps-list ul li .app-icons-2 a {
+    color: #614e3c;
+}
+
+.read .aside-left .apps-list ul li .app-icons-2 a:hover {
+    color: #fff;
+}
+
+
+/* 右侧区域 */
+
+.read .aside-right .book-cate ul {
+    line-height: 22px; 
+    border-bottom: 1px solid #eaeaea;  
+    height: 54px;
+    margin-bottom: 5px;
+}
+
+.read .aside-right .book-cate ul .cate-label {
+    color: #999;
+}
+
+.read .aside-right .book-cate ul li {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.read .aside-right .book-cate ul li a {
+    color: #614e3c;
+}
+.read .aside-right .book-cate ul li a:hover {
+    color: #fff;
+}
+
+.read .aside-right .book-cate .book-cate-1 {
+    border: none;
+}
+
+.read .aside-right .book-cate {
+    margin-top: -5px;
+}
+
+.read .container .main .book-list li {
+    display: inline-block;
+    width:100px ;
+    font-size: 12px;
+    margin-top: 30px;
+    vertical-align: top;
+    margin-right: 23px;
+    margin-left: 6px;
+}
+
+.read .container .main .book-list {
+    margin-top: -31px;
+}
+
+.read .container .main .book-list .pic {
+    height: 148px;
+}
+
+.read .container .main .book-list li img {
+    width: 100px;
+    display: block;
+}
+
+.read .container .main .book-list li .movie-name {
+    text-align: center;
+    margin-top: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.read .container .main .book-list li .movie-name a {
+    color: #333;
+    font-size: 13px;
+}
+.read .container .main .book-list li .movie-name a:hover {
+    color: #fff;
+}
+
+.read .container .main .book-list li .movie-author {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.read .container .main .book-list li .free-read {
+    text-align: center;
+    background: #999a95;
+    border-radius: 4px;
+}
+
+.read .container .main .book-list li .free-read:hover {
+    background: #878882;
+}
+
+.read .container .main .book-list li .free-read a {
+    color: #fff;
+}
+
+.read .container .main .book-list li .free-read a:hover {
+    background: #878882;
+}
+
+.read .container .main .book-list .section-title-two {
+    margin-top: -5px;
+}
+
+.read .container .main .book-list .free-read {
+    margin: 0 15px;
+}
+
+/* .read .container .main .book-list .section-title {
+    margin-top: 0;
+}
+.read .container .main .book-list .section-title-two{
+    margin-top: -5px;
+} */
+
+.section-title-two {
+    margin: 12px 0;
+    margin-top: -5px;
+}
+
+.section-title-two .title {
+    display: inline;
+    font-size: 15px;
+    color: #072;
+}
+
+.section-title-two .title::after {
+    content: "  · · · · · ·";
+}
+
+.section-title-two .link {
+    color: #37a;
+    font-size: 12px;
+}
+
+/* 豆瓣读书结束 */
+
+/* ================================================================================================= */
+
+/* 豆瓣音乐开始 */
+
+.music-area a {
+    color: #555d53;
+}
+.music-area .aside-left .left-menu a{
+    font-size: 14px;
+}
+.music-area a:hover {
+    color: #fff;
+}
+.music-area .aside-left .title a{
+    color: #f38c00;
+}
+.music-area .aside-left .title a:hover, .music-area .aside-left .title a:active {
+    color: #FFF;
+}
+
+
+.app-icon-2 {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: url("../img/app_icons.jpg") no-repeat;
+    box-shadow: 1px 1px 2px #999;
+    border-radius: 10px;
+    background-position: -250px 0;
+}
+
+.app-icon-3 {
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: url("../img/app_icons.jpg") no-repeat;
+    box-shadow: 1px 1px 2px #999;
+    border-radius: 10px;
+    background-position: -50px 0;
+}
+
+.music-area .aside-left .menu-adv a{
+    font-size: 12px;
+}
+
+.music-area .music-player-list li .player {
+    width: 240px;
+}
+
+.music-area .music-player-list li .number {
+    font-size: 12px;
+    color: #111;
+}
+
+.music-area .music-player-list li .player .img {
+    width: 48px;
+    height: 48px;
+    position: relative;
+}
+
+.music-area .music-player-list li .player .img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.music-area .music-player-list li .player .img::before {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.85);
+    color: #fff;
+    text-align: center;
+    line-height: 48px;
+}
+
+.music-area .music-player-list li .player .img:hover::before {
+    display: block;
+}
+
+.music-area .music-player-list li .player .words {
+    width: 180px;
+    margin-left: 58px;
+    font-size: 12px;
+}
+
+.music-area .music-player-list li .player .words span {
+    display: block;
+    color: #999;
+    line-height: 1.5;
+}
+
+.music-area .music-player-list li {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+
+.music-area .item-list li {
+    width: 128px;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 40px;
+}
+
+.music-area .item-list li .img {
+    width: 80px;
+    margin: 0 auto;
+}
+
+.music-area .item-list li .words {
+    margin: 4px 0;
+}
+
+.music-area .item-list.hot-music li .words{
+    font-size: 13px;
+    margin: 8px 0;
+}
+
+.music-area .item-list.hot-music li .img {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.music-area .item-list.hot-music li .img::before {
+    position: absolute;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    font-size: 33px;
+    background: rgba(0,0,0,.3);
+    border-radius: 50%;
+}
+
+.section-title.section-title-three {
+    margin-top: -60px;
+}
+
+/* 豆瓣豆品 */
+
+.doupin .aside-left .title a {
+    color: rgb(31, 148, 50);;
+}
+
+.doupin .aside-left .title a:hover {
+    color: #fff;
+}
+
+.doupin .aside-right .act li {
+    display: block;
+    margin-bottom: 15px;
+
+}
+
+.doupin .aside-right .act li .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.doupin .aside-right .act li .act-item a {
+    font-size: 14px;
+}
+
+.doupin .aside-right .act li .pic-items .pic {
+    width: 265px;
+    height: 95px;
+}
+
+.doupin .main .com ul li {
+    width: 240px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+
+.doupin .main .com ul li .pic img {
+    width: 240px;
+    height: 220px;
+}
+
+.doupin .main .com ul li .name span {
+    color: #E55457;
+}
+
+.doupin .main .com ul li .name {
+    margin-top: -5px;
+}
+
+
+/* 豆瓣同城 */
+
+.city .aside-left .title a {
+    color: #ec5303;
+}
+
+.city .aside-left .title a:hover {
+    color: #fff;
+}
+
+.city .aside-left .left-menu ul {
+    margin-top: -5px;
+}
+.city .aside-left .left-menu li {
+    font-size: 14px;
+}
+
+.city .aside-left .left-menu li a {
+    color: #643;
+}
+
+.city .aside-left .left-menu li a:hover {
+    color: #fff;
+}
+
+.city .aside-right .book-cate ul {
+    line-height: 1.5;
+    margin-bottom: -15px;
+}
+
+.city .aside-right .book-cate li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.city .aside-right .book-cate .cate-label {
+    display: block;
+}
+
+.city .aside-right .book-cate .cate-label a {
+    font-size: 14px;
+    color: #333;
+}
+
+.city .aside-right .book-cate .cate-labe l a:hover {
+    color: #fff;
+}
+
+.city .aside-right .book-cate li a {
+    font-size: 12px;
+    color: rgb(102, 68, 51);
+}
+.city .aside-right .book-cate li a:hover {
+    color: #fff;
+}
+
+.city .main ul li {
+    width: 248px;
+    display: inline-block;
+}
+
+.city .main ul li .cont a {
+    font-size: 13px;
+}
+
+.city .main ul li .cont span {
+    font-size: 12px;
+    display: block;
+    color: rgb(102, 102, 102);
+}
+
+.city .main ul li .cont {
+    margin-top: -6px;
+    margin-left: 80px;
+    line-height: 1.6;
+}
+
+.city .main ul li .cont a {
+    color: #643;
+}
+.city .main ul li .cont a:hover {
+    color: #fff;
+}
+
+.city .main ul li {
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+.city .main ul li .pic img {
+    display: block;
+}
+
+.city .main ul li .cont .cont-2 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* 豆瓣尾部 */
+
+
+.ft {
+    line-height: 1.62;
+}
+
+.ft .ft-left {
+    font-size: 12px;
+    color: #999;
+}
+
+.ft .ft-left .ft-left-1 {
+    height: 16px;
+    vertical-align: middle;
+}
+
+.ft .ft-left .ft-left-2 {
+    width: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.ft .ft-left .ft-left-3 {
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.ft .ft-right ul li{
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.ft .ft-right .img {
+    margin-top: -10px;
+}
+
+.ft .container {
+    border-top: 1px dashed #dcdcdc;
+    padding-top: 10px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

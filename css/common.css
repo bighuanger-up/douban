@@ -1,0 +1,55 @@
+@import "//at.alicdn.com/t/font_1510818_774afcnvhqa.css";
+
+/* 多页面共享的CSS代码 */
+
+
+/* 坍塌 */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 设置左右浮动 */
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+body {
+    font-family: Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;;
+}
+
+/* 隐藏 */
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    background: #41ac52;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.btn:disabled {
+    background: rgba(66 ,189 ,86 ,.5);
+    cursor: not-allowed;
+}
+
+.star .number {
+    font-size: 12px;
+    margin-left: 7px;
+    color: #e09015;
+}
+
+.star-bg {
+    display: inline-block;
+    width: 55px;
+    height: 11px;
+    background: url("../img/star-bg.png") no-repeat left top/100%;
+}
